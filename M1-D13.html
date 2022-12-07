@@ -112,18 +112,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
              Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
           */
     function getTasksAsArray() {
-      // let taskList = listSelector.innerText
-      // let getArray = []
-      // for (let index = 0; index < taskList.length; index++) {
-      //   getArray.push[index];
-
-      //   return getArray
-      // }
-
-      console.log(listSelector.innerText)
+      let taskList = document.getElementsByTagName('li')
+      let getArray = []
+      for (let li of taskList) {
+        getArray.push(li.innerText)
+      }
+      console.log(getArray)
     }
-
-
 
     /* EXERCISE 9:
              Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
@@ -146,21 +141,21 @@ The user should be able to see the list of tasks, add new ones, delete existing 
              - Break the code into many function for semplicity 
              - Reuse the functions previously created
           */
-    function bubbleSort() {
-      let bubbleSort = (inputArr) => {
-        let len = inputArr.length;
-        for (let i = 0; i < len; i++) {
-          for (let j = 0; j < len; j++) {
-            if (inputArr[j] > inputArr[j + 1]) {
-              let tmp = inputArr[j];
-              inputArr[j] = inputArr[j + 1];
-              inputArr[j + 1] = tmp;
-            }
-          }
-        }
-        return inputArr;
-      };
-    }
+    // function bubbleSort() {
+    //   let bubbleSort = (inputArr) => {
+    //     let len = inputArr.length;
+    //     for (let i = 0; i < len; i++) {
+    //       for (let j = 0; j < len; j++) {
+    //         if (inputArr[j] > inputArr[j + 1]) {
+    //           let tmp = inputArr[j];
+    //           inputArr[j] = inputArr[j + 1];
+    //           inputArr[j + 1] = tmp;
+    //         }
+    //       }
+    //     }
+    //     return inputArr;
+    //   };
+    // }
 
   </script>
 </body>
